@@ -25,15 +25,7 @@ public class Cuenta {
     }
     public void setRetiro(double cantidad) {
         saldoDeCuenta -= cantidad;
-        /*
-        if (cantidad > 0 && cantidad <= saldoDeCuenta) {
-            saldoDeCuenta -= cantidad;
-            System.out.println("Retiro de $" + cantidad + " realizado con éxito.");
-        } else if (cantidad <= 0) {
-            System.out.println("El monto de dinero a retirar debe ser mayor que cero.");
-        } else {
-            System.out.println("Fondos insuficientes para realizar el retiro.");
-        }*/
+
     }
     public double getSaldoCuenta() {
         return this.saldoDeCuenta;
