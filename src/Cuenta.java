@@ -1,3 +1,5 @@
+//RECUPERATORIO + PUNTOS EXTRA
+// Jennifer Daniela Maigual Alvarez
 import java.util.Random;
 
 public class Cuenta {
@@ -18,14 +20,12 @@ public class Cuenta {
         return 1000000000L + random.nextLong () % (9999999998L - 1000000000L + 1);
     }
     public void setIngreso(double cantidad) {
-        if (cantidad > 0) {
-            saldoDeCuenta += cantidad;
-            System.out.println("Ingreso de $" + cantidad + " realizado con éxito.");
-        } else {
-            System.out.println("El monto de dinero ingresado debe ser mayor que cero.");
-        }
+        saldoDeCuenta +=cantidad;
+
     }
     public void setRetiro(double cantidad) {
+        saldoDeCuenta -= cantidad;
+        /*
         if (cantidad > 0 && cantidad <= saldoDeCuenta) {
             saldoDeCuenta -= cantidad;
             System.out.println("Retiro de $" + cantidad + " realizado con éxito.");
@@ -33,19 +33,17 @@ public class Cuenta {
             System.out.println("El monto de dinero a retirar debe ser mayor que cero.");
         } else {
             System.out.println("Fondos insuficientes para realizar el retiro.");
-        }
+        }*/
     }
     public double getSaldoCuenta() {
         return this.saldoDeCuenta;
     }
-    public void getDatosCuenta() {
-        System.out.println("Datos de la cuenta:");
-        System.out.println("Nombre del Titular: " + nombreDelTitular);
-        System.out.println("Número de cuenta: " + numeroDeCuenta);
-        System.out.println("Saldo actual: $" + saldoDeCuenta);
-    }
+
     public String getDatosCuenta() {
-       return ("");
+       return ("Datos de la cuenta " +"\n"
+               + "Nombre del titular: "+ nombreDelTitular+"\n"
+               + "Número de cuenta: " + numeroDeCuenta +"\n"
+               + "Saldo actual: $" + saldoDeCuenta+ "\n");
     }
 
 }

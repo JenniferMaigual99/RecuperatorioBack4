@@ -1,3 +1,5 @@
+//RECUPERATORIO + PUNTOS EXTRA
+// Jennifer Daniela Maigual Alvarez
 public class Persona {
     private String nombre;
     private int edad;
