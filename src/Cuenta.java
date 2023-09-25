@@ -36,13 +36,16 @@ public class Cuenta {
         }
     }
     public double getSaldoCuenta() {
-        return saldoDeCuenta;
+        return this.saldoDeCuenta;
     }
     public void getDatosCuenta() {
         System.out.println("Datos de la cuenta:");
         System.out.println("Nombre del Titular: " + nombreDelTitular);
         System.out.println("Número de cuenta: " + numeroDeCuenta);
         System.out.println("Saldo actual: $" + saldoDeCuenta);
+    }
+    public String getDatosCuenta() {
+       return ("");
     }
 
 }
